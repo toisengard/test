@@ -1626,7 +1626,7 @@ footer .footer-content .footer-right-section .contact .contact-info-container {
   align-self: flex-end;
   margin-left: auto;
 }
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 996px) {
   footer .footer-content .footer-right-section .contact .contact-info-container {
     align-self: flex-start;
     margin-left: 0;

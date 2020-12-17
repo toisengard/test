@@ -925,7 +925,7 @@ footer{
                     align-self: flex-end;
                     margin-left: auto;
 
-                     @include mQ(1680px){
+                     @include mQ(996px){
                         align-self: flex-start;
                         margin-left:0;
                     }
