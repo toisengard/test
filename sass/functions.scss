@@ -1,0 +1,47 @@
+// Units Calculations
+
+@function strip-unit( $number ) {
+    @if type-of( $number ) == 'number' and not unitless( $number ) {
+        @return $number / ( $number * 0 + 1 );
+    }
+
+    @return $number;
+}
+
+@function vw( $width ) {
+    @return ( ( $width / 1920 ) * 100 ) + vw;
+}
+
+@function vh( $height ) {
+    @return ( ( $height / 1080 ) * 100 ) + vh;
+}
+
+@function rem( $number ) {
+    @return ( $number / 16 ) + rem;
+}
+
+@function em( $number, $font-size: 16 ) {
+    @return ( em-raw( $number, $font-size ) ) + em;
+}
+
+@function em-raw( $number, $font-size ) {
+    @return $number * ( 1 / $font-size );
+}
+
+@function medium-size-px( $number ) {
+    @return ( $number * 0.7 ) + px;
+}
+
+@function medium-size-em( $number ) {
+    @return em($number * 0.7);
+}
+
+@function medium-size-raw( $number ) {
+    @return $number * 0.7;
+}
+
+// Typography
+
+@function line-height( $line-height, $font-size: 16 ) {
+    @return $line-height / $font-size;
+}
